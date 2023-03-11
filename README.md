@@ -13,5 +13,7 @@ The accuracy of the model is 89%.
 **Technologies Used**
 
 Python
+
 TensorFlow
+
 Keras
