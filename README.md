@@ -1,1 +1,17 @@
-The project built above is for detecting Brain Tumour. We use two datasets the first dataset consists of the MRI images of the brain and the second dataset consist of the exact location of the tumour that is present in the brain. Our main objecctive in this project is to classify wether the person has Brain Tumpur or not. Firstly we perfrom CNN on the dataset to classify this is done by using the ResNET50 model. If the tumour is present in the brain later on we perfrom image segmentation to find the exact location of the tumour,If there is no tumour present we don't perfrom the image seagmentaion. Image segementation is the process of extracting the features of the image at a pixel level. We use the ResUNET model for perfrming image segmentation.The dataset is found here: https://www.kaggle.com/mateuszbuda/lgg-mri-segmentation
+
+
+This project aims to detect brain tumors using MRI images of the brain and the exact location of the tumor that is present in the brain. The main objective of this project is to classify whether a person has a brain tumor or not. The project performs Convolutional Neural Network (CNN) on the dataset to classify using the ResNET50 model. If the tumor is present in the brain, the project performs image segmentation to find the exact location of the tumor using the ResUNET model. If there is no tumor present, the project skips the image segmentation process.
+
+**Dataset**
+
+The dataset used in this project is available at Kaggle. It consists of MRI images of the brain and the exact location of the tumor that is present in the brain.
+
+**Model Accuracy**
+
+The accuracy of the model is 89%.
+
+**Technologies Used**
+
+Python
+TensorFlow
+Keras
