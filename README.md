@@ -1,19 +1,50 @@
+# Brain Tumor Detection Using MRI Scans
 
+## Overview
+This project focuses on detecting brain tumors using MRI scan images. It employs deep learning techniques, specifically transfer learning with **ResNet50**, to classify and segment brain tumor regions accurately.
 
-This project aims to detect brain tumors using MRI images of the brain and the exact location of the tumor that is present in the brain. The main objective of this project is to classify whether a person has a brain tumor or not. The project performs Convolutional Neural Network (CNN) on the dataset to classify using the ResNET50 model. If the tumor is present in the brain, the project performs image segmentation to find the exact location of the tumor using the ResUNET model. If there is no tumor present, the project skips the image segmentation process.
+## Features
+- Loads and processes brain MRI images along with segmentation masks.
+- Uses **TensorFlow's ImageDataGenerator** for data augmentation and normalization.
+- Implements **ResNet50** as a feature extractor with a custom classification head.
+- Utilizes **early stopping** and **model checkpointing** to optimize performance.
+- Provides visualizations of MRI scans, segmentation masks, and detected tumor regions.
 
-**Dataset**
+## Requirements
+Install the necessary dependencies using:
+```bash
+pip install numpy pandas seaborn matplotlib tensorflow keras opencv-python scikit-image plotly
+```
 
-The dataset used in this project is available at Kaggle. It consists of MRI images of the brain and the exact location of the tumor that is present in the brain.
+## Dataset
+- The dataset contains MRI scan images and their corresponding segmentation masks.
+- Data is stored in CSV format with image paths and mask labels.
+- Images are preprocessed and split into training and test sets using **train_test_split**.
 
-**Model Accuracy**
+## How to Run
+1. Mount Google Drive and set the dataset path.
+2. Load and preprocess MRI scan images.
+3. Train the **ResNet50-based** model with early stopping and checkpointing.
+4. Evaluate the model using test data.
+5. Visualize segmentation results and performance metrics.
 
-The accuracy of the model is 89%.
+## Model Training
+- Uses **ResNet50** as the base model, freezing its initial layers.
+- Adds fully connected layers for classification.
+- Trains with **Adam optimizer** and categorical cross-entropy loss.
+- Saves the best model based on validation loss.
 
-**Technologies Used**
+## Evaluation
+- Computes accuracy on the test dataset.
+- Generates a confusion matrix for classification analysis.
+- Produces a classification report with precision, recall, and F1-score.
+- Displays sample MRI scans with predicted tumor regions.
 
-Python
+## Output
+- Trained model for brain tumor detection.
+- Performance plots for accuracy and loss during training.
+- MRI scan visualizations with predicted tumor segmentation.
 
-TensorFlow
+## License
+This project is open-source and intended for educational and research purposes.
 
-Keras
